@@ -1,0 +1,13 @@
+package com.test.rest.api.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.test.rest.api.model.User_model;
+
+public interface User_repository extends JpaRepository<User_model, Integer>{
+	
+	User_model FindByLogin(String login);
+	
+	void DeleteByLogin(String Login);
+
+}

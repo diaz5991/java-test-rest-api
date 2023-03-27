@@ -1,0 +1,24 @@
+package com.test.rest.api.serviceTest;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.test.rest.api.model.User_model;
+import com.test.rest.api.repository.User_repository;
+
+@DataJpaTest
+public class User_Test {
+
+	@Autowired
+	User_repository userRepository;
+
+	@Test
+	public void saveUserTest() {
+		User_model user = new User_model("Hector123", "Hector", "10/48/15", "male");
+
+		userRepository.save(user);
+
+	}
+
+}

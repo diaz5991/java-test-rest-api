@@ -1,0 +1,5 @@
+package com.test.rest.api.repository;
+
+public class User_repository {
+
+}

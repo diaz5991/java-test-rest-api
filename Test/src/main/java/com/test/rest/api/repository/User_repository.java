@@ -1,0 +1,13 @@
+package com.test.rest.api.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.test.rest.api.model.User_model;
+
+@Repository
+public interface User_repository extends JpaRepository<User_model, Integer>{
+	
+	
+
+}

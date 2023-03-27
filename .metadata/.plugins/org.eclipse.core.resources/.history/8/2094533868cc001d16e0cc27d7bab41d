@@ -1,0 +1,5 @@
+package com.test.rest.api.serviceTest;
+
+public class User {
+
+}

@@ -1,0 +1,5 @@
+package com.test.rest.api.model;
+
+public class User_model {
+
+}

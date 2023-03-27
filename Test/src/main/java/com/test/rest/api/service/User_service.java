@@ -1,0 +1,39 @@
+package com.test.rest.api.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.test.rest.api.model.User_model;
+import com.test.rest.api.repository.User_repository;
+
+@Service
+public class User_service {
+
+	@Autowired
+	User_repository userRepository;
+
+	public ArrayList<User_model> getUsers() {
+
+		return (ArrayList<User_model>) userRepository.findAll();
+
+	}
+
+	public User_model saveUser(User_model user) {
+
+		return userRepository.save(user);
+	}
+
+	public void deleteUserById(Integer id) {
+
+		userRepository.deleteById(id);
+	}
+	
+	public User_model updateUser(User_model user) {
+
+		return userRepository.save(user);
+	}
+
+
+}
